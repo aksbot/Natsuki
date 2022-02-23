@@ -34,7 +34,7 @@ from telegram.ext import (
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 
-from Sakura import (
+from Natsuki import (
     ALLOW_EXCL,
     BL_CHATS,
     CERT_PATH,
@@ -92,10 +92,9 @@ buttons = [
     ],
 ]
 
-NATSUKI_IMG = "https://te.legra.ph/file/83798e3c9986bee9e8651.jpg"
 
 HELP_STRINGS = f"""
-*Main Commands :* [🤖](https://te.legra.ph/file/83798e3c9986bee9e8651.jpg)
+*Main Commands :* [🤖]
 
 /start: Starts me! You've probably already used this.
 /help: Click this, I'll let you know about myself!
@@ -111,7 +110,7 @@ HELP_STRINGS = f"""
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 You can donate to the original writer's of the Base code,
-Support them  [SADEW JAYASEKARA](https://t.me/Sakura_Updates)"""
+Support them  [Akshay chand](https://t.me/Sakura_Updates)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -128,7 +127,7 @@ USER_SETTINGS = {}
 GDPR = []
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("Sakura.modules." + module_name)
+    imported_module = importlib.import_module("Natsuki.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -371,8 +370,8 @@ def Natsuki_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"* Hi There  The name's {dispatcher.bot.first_name} \n\nAs  You I'm a next generational group management bot developed by Sakura Updates.* "
-            f"\n\n Join [SakuraUpdates](https://t.me/Sakura_Updates) To Keep Yourself Updated About {dispatcher.bot.first_name}"
+            text=f"* Hi There  The name's {dispatcher.bot.first_name} \n\nAs  You I'm a next generational group management bot developed by Natsuki Updates.* "
+            f"\n\n Join [NatsukiUpdates](https://t.me/Natsuki_Updates) To Keep Yourself Updated About {dispatcher.bot.first_name}"
             f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
             f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features"
             f"\n\nYou Can Know More About Me By Clicking The Below Buttons",
@@ -809,7 +808,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Sakura is online ❤")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Sakura now online ❤")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
