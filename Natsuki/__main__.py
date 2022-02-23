@@ -34,7 +34,7 @@ from telegram.ext import (
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 
-from Natsuki import (
+from Sakura import (
     ALLOW_EXCL,
     BL_CHATS,
     CERT_PATH,
@@ -111,7 +111,7 @@ HELP_STRINGS = f"""
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 You can donate to the original writer's of the Base code,
-Support them  [SADEW JAYASEKARA](t.me/Itz_Sadew)"""
+Support them  [SADEW JAYASEKARA](https://t.me/Sakura_Updates)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -128,7 +128,7 @@ USER_SETTINGS = {}
 GDPR = []
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("Natsuki.modules." + module_name)
+    imported_module = importlib.import_module("Sakura.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -371,8 +371,8 @@ def Natsuki_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"* Hi There  The name's {dispatcher.bot.first_name} \n\nAs  You I'm a next generational group management bot developed by Natsuki Updates.* "
-            f"\n\n Join [NatsukiUpdates](https://t.me/Natsuki_Updates) To Keep Yourself Updated About {dispatcher.bot.first_name}"
+            text=f"* Hi There  The name's {dispatcher.bot.first_name} \n\nAs  You I'm a next generational group management bot developed by Sakura Updates.* "
+            f"\n\n Join [SakuraUpdates](https://t.me/Sakura_Updates) To Keep Yourself Updated About {dispatcher.bot.first_name}"
             f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
             f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features"
             f"\n\nYou Can Know More About Me By Clicking The Below Buttons",
@@ -405,7 +405,7 @@ def Natsuki_about_callback(update, context):
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
             f"\nIf You Can Also Add {dispatcher.bot.first_name} To Your Chats By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) And Selecting Chat. \n"
-            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [Natsuki Support](https://t.me/Sakura_Updates).\n"
+            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [Sakura Support](https://t.me/Sakura_Updates).\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -809,7 +809,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Sakura now online ❤")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Sakura is online ❤")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
