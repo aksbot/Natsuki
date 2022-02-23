@@ -63,39 +63,39 @@ from Natsuki.modules.helper_funcs.misc import paginate_modules
 from Natsuki.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-👋 Hey There, My Name is 𝗡𝗮𝘁𝘀𝘂𝗸𝗶. 
+👋 Hey There, My Name is Sakura. 
 I'm a Powerfull Group Manager Bot With Cool Modules. feel free to add me to your groups!
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="Natsuki News 🙋‍♂️", url="https://t.me/Natsuki_Updates"
+            text="Sakura News 🙋‍♂️", url="https://t.me/Sakura_Updates"
         ),
         InlineKeyboardButton(
-            text="Support Group 💬", url="https://t.me/NatsukiSupport_Official"
-        ),
-    ],
-    [
-        InlineKeyboardButton(
-            text="Source 🗒", url="Github.com/Sadew451"
-        ),
-        InlineKeyboardButton(
-            text="Command Help ❓", callback_data="help_back"
+            text="Update Sakura 😘 ", url="https://t.me/Sakura_Updates"
         ),
     ],
     [
         InlineKeyboardButton(
-            text="➕ Add To Me Your Group ➕",
-            url="t.me/TheNatsukiBot?startgroup=true",
+            text="Source 🗒", url="https://t.me/Sakura_Updates"
+        ),
+        InlineKeyboardButton(
+            text="👇Command Help 👇", callback_data="help_back"
+        ),
+    ],
+    [
+        InlineKeyboardButton(
+            text="➕ Add To Sakura Your Group ➕",
+            url="http://t.me/SakuraGFbot?startgroup=true",
         ),
     ],
 ]
 
-NATSUKI_IMG = "https://telegra.ph/file/2d0fa7e07eb1fe3983aba.jpg"
+NATSUKI_IMG = "https://te.legra.ph/file/83798e3c9986bee9e8651.jpg"
 
 HELP_STRINGS = f"""
-*Main Commands :* [🤖](https://telegra.ph/file/2d0fa7e07eb1fe3983aba.jpg)
+*Main Commands :* [🤖](https://te.legra.ph/file/83798e3c9986bee9e8651.jpg)
 
 /start: Starts me! You've probably already used this.
 /help: Click this, I'll let you know about myself!
@@ -382,7 +382,7 @@ def Natsuki_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🙋‍♀️ How To Use Me", callback_data="aboutmanu_howto"
+                            text="🙋 How To Use Me", callback_data="aboutmanu_howto"
                         ),
                         InlineKeyboardButton(
                             text="🗒 Terms and Conditions", callback_data="aboutmanu_tac"
@@ -405,7 +405,7 @@ def Natsuki_about_callback(update, context):
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
             f"\nIf You Can Also Add {dispatcher.bot.first_name} To Your Chats By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) And Selecting Chat. \n"
-            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [Natsuki Support](https://t.me/NatsukiSupport_Official).\n"
+            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [Natsuki Support](https://t.me/Sakura_Updates).\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -424,8 +424,8 @@ def Natsuki_about_callback(update, context):
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
             text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and Naruto for the best performance.*"
-            f"\n\nBased on [SDBOTsInifinity](https://t.me/SDBOTs_Inifinity)."
-            f"\n\n{dispatcher.bot.first_name}'s source code was written by Sadew Jayasekara"
+            f"\n\nBased on [SDBOTsInifinity](https://t.me/Sakura_Updates)."
+            f"\n\n{dispatcher.bot.first_name}'s source code was written by Akshay chand"
             f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @{SUPPORT_CHAT}.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -809,7 +809,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I am now online ❤")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Sakura now online ❤")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
